@@ -1,1 +1,1 @@
-console.log('this is a different dist')
+console.log('this is so you never have to build a webpack config again')
