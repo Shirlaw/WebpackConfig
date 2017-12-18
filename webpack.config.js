@@ -9,6 +9,7 @@ module.exports = {
     project: './src/project.js'
 
   },
+  devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
