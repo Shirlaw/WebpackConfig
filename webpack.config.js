@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -6,7 +7,10 @@ module.exports = {
   entry:
   {
     index: './src/index.js',
-    project: './src/project.js'
+    project: './src/project.js',
+    vendor: [
+      'react'
+    ]
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -16,6 +20,9 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Webpack Config'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
     })
   ],
   output: {
