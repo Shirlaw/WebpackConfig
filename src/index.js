@@ -1,3 +1,4 @@
-import react from "react"
+import react from "react";
+require("./styles.scss");
 
-console.log('hello James Shirlaw')
+console.log("hello James Shirlaw");
